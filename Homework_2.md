@@ -1,5 +1,6 @@
 # Homework 2
 Group members: Jyothyraj Sobhana, Katarzyna Olsynska, Lucianna Tomlin-Paul, Mina Mahdi, Naomi McEntegart
+
 Target audience: educational/professional 
 
 ## What are we building?
