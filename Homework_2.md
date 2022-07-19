@@ -12,9 +12,12 @@ Target audience: educational/professional
 2. View all lists
 3. Display lists
 4. Rename list
-5. Delate list
+5. Delete list
 6. User is able to add items to to-do list (input)
-7. User is able to tick off items
+7. User is able to tick off items(Update the progress of task)
+8. Add Deadline for task
+9. Suggestion of target (to be completed) per day basis as a result on task creation
+10. 
 
 ### Additional Features
 1. Scheduling functionality
@@ -24,6 +27,7 @@ Target audience: educational/professional
 5. Option to buy rewards for task completion with points - link to reward shop - API
 6. Habit tracker  
 7. Program sets a timer for tasks
+8. 
 
 ## Provide a sample architecture diagram of the system
 ## Describe the team approach to the project work

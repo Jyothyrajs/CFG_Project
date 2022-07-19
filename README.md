@@ -9,5 +9,9 @@ Title: To do
 
 What it does:
 
-Tools & Techniques: 
+Tools & Techniques:
+
+##install tkinter
+
+ ### Mac : brew install python-tk
 
