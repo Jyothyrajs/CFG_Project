@@ -6,8 +6,8 @@ Target audience: educational/professional
 ## What are we building?
 ## What does it do/What kind of problem does it solve
 ## What are the key features of the system?
-### Key User Requirements
-## Basic Requirements
+## Key User Requirements
+### Basic Requirements
 1. Create new list
 2. View all lists
 3. Display lists
