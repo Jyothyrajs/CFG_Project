@@ -4,7 +4,7 @@ Group members: Jyothyraj Sobhana, Katarzyna Olszynska, Lucianna Tomlin-Paul, Min
 Target audience: educational/professional 
 
 ## What are we building?
-A productivity software to enhance an individuals productivity. It is a to-do-list/ Habit tracker with a pomodoro timer. 
+A productivity software to enhance an individuals productivity. It is a to-do-list/ Habit tracker with a pomodoro timer. Unlike many other to-do list apps available, this one will incorporate methods to encourage extrinsic motivation through earning points from completing tasks and buying rewards with these points. 
 
 
 ## What does it do/What kind of problem does it solve
