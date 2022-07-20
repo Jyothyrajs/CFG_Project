@@ -4,8 +4,23 @@ Group members: Jyothyraj Sobhana, Katarzyna Olszynska, Lucianna Tomlin-Paul, Min
 Target audience: educational/professional 
 
 ## What are we building?
+A productivity software to enhance an individuals productivity. It is a to-do-list/ Habit tracker with a pomodoro timer. 
+
+
 ## What does it do/What kind of problem does it solve
+This software helps to keep you focused, organised, and helps you to build productive habit. 
+It does not promote toxic productivity by focusing not only on the importance of being productive, but rather also on mental wellbeing too.
+It provides rewards for being productive.
+
+
+
 ## What are the key features of the system?
+1. A session timer (pomodoro)
+2. It has 3 pre-defiened to-do-lists - daily, weekly, monthly 
+3. Configurable colour schemes 
+
+
+
 ## Key User Requirements
 ### Basic Requirements
 1. Create new list
@@ -30,4 +45,10 @@ Target audience: educational/professional
 8. 
 
 ## Provide a sample architecture diagram of the system
+
+
+
+
 ## Describe the team approach to the project work
+
+
