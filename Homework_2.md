@@ -45,6 +45,6 @@ Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of 
 
 Mina Mahdi: 
 
-Naomi McEntegart:
+Naomi McEntegart: No.3 - scheduling / pomodoro
 
 
