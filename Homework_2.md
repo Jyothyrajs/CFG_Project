@@ -38,8 +38,13 @@ This software helps to keep you focused, organised, and helps you to build produ
 Initially work together to code the basic requirments to ensure everyone has an understanding of how the to-do list will work. The team will then adopt agile development using jira to plan the subsequent tasks to be completed in mini-sprints until the deadline. The additional features will be divided among the team as follows:
 
 Jyothyraj Sobhana:
+
 Katarzyna Olszynska: 
+
 Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of the app
+
 Mina Mahdi: 
+
 Naomi McEntegart:
+
 
