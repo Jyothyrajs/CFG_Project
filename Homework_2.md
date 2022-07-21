@@ -43,7 +43,7 @@ Katarzyna Olszynska:
 
 Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of the app
 
-Mina Mahdi: 
+Mina Mahdi: Habit tracker
 
 Naomi McEntegart: No.3 - scheduling / pomodoro
 
