@@ -26,8 +26,7 @@ This software helps to keep you focused, organised, and helps you to build produ
 4. Categorising/colour coding of tasks
 5. Points assigned for task completion 
 6. Option to buy rewards for task completion with points - link to reward shop - API
-7. Habit tracker  
-8. It has 3 pre-defiened to-do-lists - daily, weekly, monthly 
+7. It has 3 pre-defiened to-do-lists - daily, weekly, monthly 
 
 ## Provide a sample architecture diagram of the system
 
@@ -46,7 +45,7 @@ Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of 
 
 Mina Mahdi: Will work on creating the Habit tracker aspect of the app.
 
-Naomi McEntegart:  No.3 - scheduling / pomodoro
+Naomi McEntegart:  Will work on scheduling / pomodoro
 
 To test the code we will be doing a unit test whilst coding, then we will also do an integration test and finally we will be a system test as a whole to make sure that the system works seamlessly. We will also carry out a UAT(user acceptance testing) to make sure everything works the way that a user would want it to work refering to user stories to guide us in this process. 
 
