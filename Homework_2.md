@@ -35,7 +35,7 @@ This software helps to keep you focused, organised, and helps you to build produ
 
 
 ## Describe the team approach to the project work
-Initially work together to code the basic requirements to ensure everyone has an understanding of how the to-do list will work by partaking in a group coding session over Zoom. The team will then adopt agile development style using jira to plan the subsequent tasks to be completed in mini-sprints until the deadline. We have created a github repo so that the work can be uploaded there and we can all see everyones progress. We intend to hold around 2-3 Zoom meetings a week to update each other, discuss the next stage of the project as well as regularly communicate on our slack group chat. 
+Initially work together to code the basic requirements to ensure everyone has an understanding of how the to-do list will work by partaking in a group coding session over Zoom. The team will then adopt agile development style using jira to plan the subsequent tasks to be completed in mini-sprints until the deadline. We have created a github repo so that the work can be uploaded there and we can all see everyones progress. We intend to hold 15 minute Zoom meetings before each lesson a week to update each other, discuss the next stage of the project as well as regularly communicating on our slack group chat. We will also schedule longer-timed meetings when needed throughout the project. 
 The additional features will be divided among the team as follows:
 
 Jyothyraj Sobhana:
