@@ -48,7 +48,6 @@ Mina Mahdi: Will work on creating the Habit tracker aspect of the app.
 
 Naomi McEntegart:  No.3 - scheduling / pomodoro
 
-To test the code we will be doing a unit test whilst coding, then we will also do an integration test and finally we will be a system test as a whole to make sure that the system works seamlessly. If possible we intend to have users test the program, these users will most like be friends/ family with this specifc project. 
-
+To test the code we will be doing a unit test whilst coding, then we will also do an integration test and finally we will be a system test as a whole to make sure that the system works seamlessly. We will also carry out a UAT(user acceptance testing) to make sure everything works the way that a user would want it to work refering to user stories to guide us in this process. 
 
 
