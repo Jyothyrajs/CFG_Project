@@ -4,7 +4,7 @@ Group members: Jyothyraj Sobhana, Katarzyna Olszynska, Lucianna Tomlin-Paul, Min
 Target audience: educational/professional 
 
 ## What are we building?
-A productivity software to enhance an individual's productivity. It is a to-do-list/Habit tracker with a pomodoro timer and also implements a point/reward system for motivation. 
+A productivity software to enhance an individual's productivity. It is a to-do-list/Habit tracker with a pomodoro timer that also implements a point/reward system for motivation purposes. 
 
 ## What does it do/What kind of problem does it solve
 This software helps to keep you focused, organised, and helps you to build productive habits. Unlike many other to-do list apps available, this one will incorporate methods to encourage extrinsic motivation through earning points from completing tasks and buying rewards with these points. However, it will not promote toxic productivity, this will be minimised through enforcing breaks after pomodoro completion to encourage mental wellbeing.
@@ -35,16 +35,20 @@ This software helps to keep you focused, organised, and helps you to build produ
 
 
 ## Describe the team approach to the project work
-Initially work together to code the basic requirments to ensure everyone has an understanding of how the to-do list will work. The team will then adopt agile development using jira to plan the subsequent tasks to be completed in mini-sprints until the deadline. The additional features will be divided among the team as follows:
+Initially work together to code the basic requirements to ensure everyone has an understanding of how the to-do list will work by partaking in a group coding session over Zoom. The team will then adopt agile development style using jira to plan the subsequent tasks to be completed in mini-sprints until the deadline. We have created a github repo so that the work can be uploaded there and we can all see everyones progress. We intend to hold around 2-3 Zoom meetings a week to update each other, discuss the next stage of the project as well as regularly communicate on our slack group chat. 
+The additional features will be divided among the team as follows:
 
 Jyothyraj Sobhana:
 
 Katarzyna Olszynska: Will focus on colour coding for priorisation of the tasks- 3 levels of urgency.
 
-Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of the app
+Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of the app.
 
-Mina Mahdi: Habit tracker
+Mina Mahdi: Will work on creating the Habit tracker aspect of the app.
 
-Naomi McEntegart: No.3 - scheduling / pomodoro
+Naomi McEntegart:  No.3 - scheduling / pomodoro
+
+To test the code we will be doing a unit test whilst coding, then we will also do an integration test and finally we will be a system test as a whole to make sure that the system works seamlessly. If possible we intend to have users test the program, these users will most like be friends/ family with this specifc project. 
+
 
 
