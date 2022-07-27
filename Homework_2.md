@@ -39,7 +39,7 @@ Initially work together to code the basic requirments to ensure everyone has an 
 
 Jyothyraj Sobhana:
 
-Katarzyna Olszynska: 
+Katarzyna Olszynska: Will focus on colour coding for priorisation of the tasks- 3 levels of urgency.
 
 Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of the app
 
