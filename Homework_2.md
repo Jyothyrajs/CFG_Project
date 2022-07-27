@@ -27,7 +27,7 @@ This software helps to keep you focused, organised, and helps you to build produ
 5. Points assigned for task completion 
 6. Option to buy rewards for task completion with points - link to reward shop - API
 7. Habit tracker  
-8. It has 3 pre-defiened to-do-lists - daily, weekly, monthly 
+8. It has 3 pre-defined to-do-lists - daily, weekly, monthly 
 
 ## Provide a sample architecture diagram of the system
 
@@ -38,9 +38,9 @@ This software helps to keep you focused, organised, and helps you to build produ
 Initially work together to code the basic requirements to ensure everyone has an understanding of how the to-do list will work by partaking in a group coding session over Zoom. The team will then adopt agile development style using jira to plan the subsequent tasks to be completed in mini-sprints until the deadline. We have created a github repo so that the work can be uploaded there and we can all see everyones progress. We intend to hold 15 minute Zoom meetings before each lesson a week to update each other, discuss the next stage of the project as well as regularly communicating on our slack group chat. We will also schedule longer-timed meetings when needed throughout the project. 
 The additional features will be divided among the team as follows:
 
-Jyothyraj Sobhana:
+Jyothyraj Sobhana: Will do with program schedules and target suggestion
 
-Katarzyna Olszynska: Will focus on colour coding for priorisation of the tasks- 3 levels of urgency.
+Katarzyna Olszynska: Will focus on colour coding for prioritisation of the tasks- 3 levels of urgency.
 
 Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of the app.
 
