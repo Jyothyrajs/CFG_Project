@@ -43,7 +43,7 @@ Katarzyna Olszynska: Will focus on colour coding for priorisation of the tasks- 
 
 Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of the app.
 
-Mina Mahdi: Will work on creating the Habit tracker aspect of the app.
+Mina Mahdi: Will work on implementing the API aspect of the app with Lucianna. 
 
 Naomi McEntegart:  Will work on scheduling / pomodoro
 
