@@ -30,6 +30,8 @@ This software helps to keep you focused, organised, and helps you to build produ
 
 ## Provide a sample architecture diagram of the system
 
+The first diagram shows the logic of the system, whereas the second shows the actual structure of the system.
+
 ![image](https://user-images.githubusercontent.com/104771053/181619110-2e35b1c8-ac53-4d62-887c-e8f689506573.png)
 ![image](https://user-images.githubusercontent.com/104771053/181619156-88d456f3-8918-445b-a7d1-118b43bae7b8.png)
 
