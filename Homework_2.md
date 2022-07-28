@@ -30,6 +30,8 @@ This software helps to keep you focused, organised, and helps you to build produ
 
 ## Provide a sample architecture diagram of the system
 
+![image](https://user-images.githubusercontent.com/104771053/181619110-2e35b1c8-ac53-4d62-887c-e8f689506573.png)
+![image](https://user-images.githubusercontent.com/104771053/181619156-88d456f3-8918-445b-a7d1-118b43bae7b8.png)
 
 
 
@@ -37,7 +39,7 @@ This software helps to keep you focused, organised, and helps you to build produ
 Initially work together to code the basic requirements to ensure everyone has an understanding of how the to-do list will work by partaking in a group coding session over Zoom. The team will then adopt agile development style using jira to plan the subsequent tasks to be completed in mini-sprints until the deadline. We have created a github repo so that the work can be uploaded there and we can all see everyones progress. We intend to hold 15 minute Zoom meetings before each lesson a week to update each other, discuss the next stage of the project as well as regularly communicating on our slack group chat. We will also schedule longer-timed meetings when needed throughout the project. 
 The additional features will be divided among the team as follows:
 
-Jyothyraj Sobhana:
+Jyothyraj Sobhana: Will work on Database creation/connection 
 
 Katarzyna Olszynska: Will focus on colour coding for priorisation of the tasks- 3 levels of urgency.
 
@@ -46,6 +48,8 @@ Lucianna Tomlin-Paul: Will work in implementing the point and reward aspects of 
 Mina Mahdi: Will work on implementing the API aspect of the app with Lucianna. 
 
 Naomi McEntegart:  Will work on scheduling / pomodoro
+
+Additional features will be worked on by all team members when/if we have time 
 
 To test the code we will be doing a unit test whilst coding, then we will also do an integration test and finally we will be a system test as a whole to make sure that the system works seamlessly. We will also carry out a UAT(user acceptance testing) to make sure everything works the way that a user would want it to work refering to user stories to guide us in this process. 
 
