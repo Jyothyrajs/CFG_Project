@@ -70,5 +70,27 @@ def retrieve_item():
 
     response = Response(json.dumps(res_data), status=200, mimetype='application/json')
     return response
+    
+    # PUT method to execute the Update_priority function 
+    
+    @app.route('/item/update', methods=['PUT'])
+def update_priority():
+    # Get item from the POST body
+    req_data = request.get_json()
+    task = req_data['task']
+    priority = req_data['priority']
+
+    # Update priority of item in the list:
+    res_data = db_connection.update_status(task, priority)
+
+    # Return error if the status could not be updated
+    if res_data is None:
+        response = Response("{'error': 'Error updating item - '" + item + ", " + status   +  "}", status=400 , mimetype='application/json')
+        return response
+
+    # Return response
+    response = Response(json.dumps(res_data), mimetype='application/json')
+
+    return response
        
     
