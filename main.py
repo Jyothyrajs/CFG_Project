@@ -92,5 +92,25 @@ def update_priority():
     response = Response(json.dumps(res_data), mimetype='application/json')
 
     return response
+
+# DELETE request:
+
+@app.route('/item/remove', methods=['DELETE'])
+def delete_task():
+    # Get item from the POST body
+    req_data = request.get_json()
+    task = req_data['task']
+
+    # Delete item from the list
+    res_data = db_connection.delete_task(task)
+
+    # Return error if the item could not be deleted
+    if res_data is None:
+        response = Response("{'error': 'Error deleting task - '" + task +  "}", status=400 , mimetype='application/json')
+        return response
+
+    # Return response
+    response = Response(json.dumps(res_data), mimetype='application/json')
+
        
     
