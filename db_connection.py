@@ -22,7 +22,7 @@ def _connect_to_db(db_name):
 
 def insert_new_task(Task,Priority,duration):
     try:
-        project_db = connect_db('Productivity')
+        project_db = _connect_to_db('Productivity')
         cur = project_db.cursor()
         query = """
                    INSERT INTO TODO_LIST(Task, Priority, deadline)
@@ -67,13 +67,15 @@ def update_priority(task, priority):
         return None
 
 def delete_task(task):
-    # Below needs adapting to mysql:
-#     try:
-#         conn = sqlite3.connect(DB_PATH)
-#         c = conn.cursor()
-#         c.execute('delete from items where item=?', (item,))
-#         conn.commit()
-#         return {'item': item}
+    # Below needs adapting to mysql:?
+    try:
+        conn =  _connect_to_db('Productivity')
+        c = conn.cursor()
+        sql = 'delete from items where task=%s'
+        data = (task)
+        c.execute(sql, data)
+        conn.commit()
+        return {'task': task}
     except Exception as e:
         print('Error: ', e)
         return None
