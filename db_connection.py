@@ -18,26 +18,28 @@ def _connect_to_db(db_name):
         auth_plugin='mysql_native_password',
         database=db_name)
     return cnx
+    
 
-
-
-
-def insert_new_task(Task,Priority,duration,deadline):
+def insert_new_task(Task,Priority,duration):
     try:
         project_db = connect_db('Productivity')
-        query = "INSERT INTO TODO_LIST(Task,Priority,duration,deadline) VALUES('Task,Priority,duration,deadline')'"
-        my_cursor = project_db.cursor()
-        my_cursor.execute(query)
+        cur = project_db.cursor()
+        query = """
+                   INSERT INTO TODO_LIST(Task, Priority, deadline)
+                   VALUES("{}", "{}", "{}")'.format(Task, Priority, deadline) 
+                   """ #Ive seen some people use %s to indicate that its a string that should be inputted, butis priority and deadline a string? 
+        cur.execute(query)
 
     except Exception:
         raise DbConnectionError("Unable to connect to database")
     finally:
         if project_db:
             project_db.close()
+            print("DB connection closed")
 
 # UPDATE priority level of to do list item (e.g. high priority) 
 
-def update_priority(task, priority):
+def update_priority(task, priority): 
     # Check if the passed status is a valid value
     if (priority.lower().strip() == 'High'):
         status = NOTSTARTED
@@ -49,14 +51,19 @@ def update_priority(task, priority):
         print("Error: Status invalid " + status)
         return None
 
-    try:
-        conn = sqlite3.connect(DB_PATH)
-        c = conn.cursor()
-        c.execute('update items set status=? where item=?', (status, item))
-        conn.commit()
-        return {item: status}
-    except Exception as e:
-        print('Error: ', e)
+     try: 
+        project_db=connect_db('Productivity')
+        cur = project_db.cursor()
+        cur.execute("""Update Task 
+                       set status= %s 
+                       where item= %s""",(status, task)) #should this be priority insteead of status? Not sure  
+        conn.commit() #Got up to here with editing. 
+        return {task: status}
+ except Exception:
+        raise DbConnectionError("Unable to connect to database")
+    finally:
+        if project_db:
+            project_db.close()
         return None
 
 def delete_task(task):
