@@ -36,14 +36,14 @@ def retrieve_items():
     return response
  
  
- def retrieve_items():
+ def retrieve_task():
     try:
         # Code below to be checked with mysql instead of mysql:
-        # conn = sqlite3.connect(DB_PATH)
-        # c = conn.cursor()
-        # c.execute('select * from items')
-        # rows = c.fetchall()
-        # return { "count": len(rows), "items": rows }
+        conn =  _connect_to_db('Productivity')
+        c = conn.cursor()
+        c.execute('select * from task')
+        result = c.fetchall()
+        return { "count": len(result), "task": result }
      except Exception as e:
         print('Error: ', e)
         return None
