@@ -1,12 +1,12 @@
 import db_connection.py
-From flask  import Flask, request, Response
+From flask  import Flask, request, Response, render_template # Added render_template for HTML file
 import json
 
 app =Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello ...Welcome to Productivity App"
+    return render_template('base.html') # Links to base.html file in "Templates" directory 
 
 @app.route('/item/new', methods=['POST'])
 def insert_new_task():
