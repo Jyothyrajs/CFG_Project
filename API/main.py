@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request # Added render_template for HTML file
-import API.db_connection as db_connection
+import API.db_connection as dbconnection
 import json
 
 user_points = 0
@@ -15,7 +15,7 @@ def insert_new_task():
     req_data = request.get_json()
     item = req_data['item']
     
-    res_data = db_connection.connect_db(Productivity)
+    res_data = dbconnection.connect_db(Productivity)
     
     # return 400 status if item is not added (error)
     
@@ -31,7 +31,7 @@ def insert_new_task():
 @app.route('/items/all')
 def retrieve_items():
     # Get items from the db connection file 
-    res_data = db_connection.retrieve_items()
+    res_data = dbconnection.retrieve_items()
 
     # Return response
     response = Response(json.dumps(res_data), mimetype='application/json')
@@ -41,7 +41,7 @@ def retrieve_items():
 def retrieve_task():
     try:
         # Code below to be checked with mysql instead of mysql:
-        conn = _connect_to_db('Productivity')
+        conn = dbconnection('Productivity')
         c = conn.cursor()
         c.execute('select * from task')
         result = c.fetchall()
@@ -58,7 +58,7 @@ def retrieve_item():
     item_name = request.args.get('name')
 
     # Get items from the db_connection file
-    status = db_connection.retrieve_item(item_name)
+    status = dbconnection.retrieve_item(item_name)
 
     # Return 404 if item not found
     if status is None:
@@ -83,7 +83,7 @@ def update_priority():
     priority = req_data['priority']
 
     # Update priority of item in the list:
-    res_data = db_connection.update_status(task, priority)
+    res_data = dbconnection.update_status(task, priority)
 
     # Return error if the status could not be updated
     if res_data is None:
@@ -104,7 +104,7 @@ def delete_task():
     task = req_data['Task']
 
     # Delete item from the list
-    res_data = db_connection.delete_task(task)
+    res_data = dbconnection.delete_task(task)
 
     # Return error if the item could not be deleted
     if res_data is None:
