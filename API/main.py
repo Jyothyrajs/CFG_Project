@@ -1,5 +1,5 @@
-import db_connection.py
-From flask  import Flask, request, Response, render_template # Added render_template for HTML file
+from flask import Flask, jsonify, request # Added render_template for HTML file
+import API.db_connection as db_connection
 import json
 
 user_points = 0
@@ -8,7 +8,7 @@ app =Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template('base.html') # Links to base.html file in "Templates" directory 
+    return render_template('base.html') # Links to base.html file in "Templates" directory
 
 @app.route('/item/new', methods=['POST'])
 def insert_new_task():
@@ -26,9 +26,9 @@ def insert_new_task():
     #json.dumps to convert python into JSON object
     response = Response(json.dumps(res_data), mimetype='application/json')
  
- return response
+    return response
  
- @app.route('/items/all')
+@app.route('/items/all')
 def retrieve_items():
     # Get items from the db connection file 
     res_data = db_connection.retrieve_items()
@@ -38,15 +38,15 @@ def retrieve_items():
     return response
  
  
- def retrieve_task():
+def retrieve_task():
     try:
         # Code below to be checked with mysql instead of mysql:
-        conn =  _connect_to_db('Productivity')
+        conn = _connect_to_db('Productivity')
         c = conn.cursor()
         c.execute('select * from task')
         result = c.fetchall()
         return { "count": len(result), "task": result }
-     except Exception as e:
+    except Exception as e:
         print('Error: ', e)
         return None
 
@@ -75,7 +75,7 @@ def retrieve_item():
     
     # PUT method to execute the Update_priority function 
     
-    @app.route('/item/update', methods=['PUT'])
+@app.route('/item/update', methods=['PUT'])
 def update_priority():
     # Get item from the POST body
     req_data = request.get_json()
@@ -101,7 +101,7 @@ def update_priority():
 def delete_task():
     # Get item from the POST body
     req_data = request.get_json()
-    task = req_data['task']
+    task = req_data['Task']
 
     # Delete item from the list
     res_data = db_connection.delete_task(task)
@@ -116,6 +116,9 @@ def delete_task():
     
     #Adding points to the user for completion of task
     user_points += 1
+
+
+
 
        
     

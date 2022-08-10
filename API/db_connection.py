@@ -5,9 +5,9 @@ class DbConnectionError(Exception):
     pass
 
 
-#NOTSTARTED = 'Not Started'
-#INPROGRESS = 'In Progress'
-#COMPLETED = 'Completed'
+# NOTSTARTED = 'Not Started'
+# INPROGRESS = 'In Progress'
+# COMPLETED = 'Completed'
 
 
 def _connect_to_db(db_name):
@@ -42,17 +42,17 @@ def insert_new_task(Task,Priority,duration):
 def update_priority(task, priority): 
     # Check if the passed status is a valid value
     if (priority.lower().strip() == 'High'):
-        status = NOTSTARTED
+        priority = NOTSTARTED
     elif (priority.lower().strip() == 'Medium'):
-        status = INPROGRESS
+        priority = INPROGRESS
     elif (priority.lower().strip() == 'Low'):
-        status = COMPLETED
+        priority = COMPLETED
     else:
-        print("Error: Status invalid " + status)
+        print("Error: Status invalid " + priority)
         return None
 
      try: 
-        project_db=connect_db('Productivity')
+        project_db=_connect_to_db('Productivity')
         cur = project_db.cursor()
         cur.execute("""Update Task 
                        set status= %s 
@@ -69,7 +69,7 @@ def update_priority(task, priority):
 def delete_task(task):
     # Below needs adapting to mysql:?
     try:
-        project_db=connect_db('Productivity')
+        project_db=_connect_to_db('Productivity')
         cur = project_db.cursor()
         query= """Delete From TODO_LIST Task Where Task =%s"""
         cur.execute(query)
