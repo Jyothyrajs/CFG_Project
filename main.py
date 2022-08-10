@@ -2,6 +2,8 @@ import db_connection.py
 From flask  import Flask, request, Response, render_template # Added render_template for HTML file
 import json
 
+user_points = 0
+
 app =Flask(__name__)
 
 @app.route('/')
@@ -111,6 +113,9 @@ def delete_task():
 
     # Return response
     response = Response(json.dumps(res_data), mimetype='application/json')
+    
+    #Adding points to the user for completion of task
+    user_points += 1
 
        
     
