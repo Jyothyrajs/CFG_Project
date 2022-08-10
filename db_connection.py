@@ -18,7 +18,7 @@ def _connect_to_db(db_name):
         auth_plugin='mysql_native_password',
         database=db_name)
     return cnx
-    
+
 
 def insert_new_task(Task,Priority,duration):
     try:
@@ -69,14 +69,17 @@ def update_priority(task, priority):
 def delete_task(task):
     # Below needs adapting to mysql:?
     try:
-        conn =  _connect_to_db('Productivity')
-        c = conn.cursor()
-        sql = 'delete from items where task=%s'
-        data = (task)
-        c.execute(sql, data)
-        conn.commit()
+        project_db=connect_db('Productivity')
+        cur = project_db.cursor()
+        query= """Delete From TODO_LIST Task Where Task =%s"""
+        cur.execute(query)
         return {'task': task}
-    except Exception as e:
-        print('Error: ', e)
+
+except Exception:
+    raise DbConnectionError("Unable to connect to database")
+finally:
+    if project_db:
+        project_db.close()
+    print("DB connection closed")
         return None
- 
+
