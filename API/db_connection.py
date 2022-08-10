@@ -11,13 +11,13 @@ class DbConnectionError(Exception):
 
 
 def _connect_to_db(db_name):
-    cnx = mysql.connector.connect(
+    conn = mysql.connector.connect(
         host=HOST,
         user=USER,
         password=PASSWORD,
         auth_plugin='mysql_native_password',
         database=db_name)
-    return cnx
+    return conn
 
 
 def insert_new_task(Task,Priority,duration):
@@ -56,9 +56,10 @@ def update_priority(task, priority):
         cur = project_db.cursor()
         cur.execute("""Update Task 
                        set status= %s 
-                       where item= %s""",(status, task)) #should this be priority insteead of status? Not sure  
-        conn.commit() #Got up to here with editing. 
-        return {task: status}
+                       where item= %s""",(priority, task))
+        conn.commit()
+        return {task: priority}
+
  except Exception:
         raise DbConnectionError("Unable to connect to database")
     finally:
