@@ -20,13 +20,13 @@ def _connect_to_db(db_name):
     return conn
 
 
-def insert_new_task(Task,Priority,duration):
+def insert_new_task(Task,Priority,Duration):
     try:
         project_db = _connect_to_db('Productivity')
         cur = project_db.cursor()
         query = """
-                   INSERT INTO TODO_LIST(Task, Priority, deadline)
-                   VALUES("{}", "{}", "{}")'.format(Task, Priority, deadline) 
+                   INSERT INTO TODO_LIST(Task, Priority, Duration)
+                   VALUES("{}", "{}", "{}")'.format(Task, Priority, Duration) 
                    """ #Ive seen some people use %s to indicate that its a string that should be inputted, butis priority and deadline a string? 
         cur.execute(query)
 
@@ -39,16 +39,16 @@ def insert_new_task(Task,Priority,duration):
 
 # UPDATE priority level of to do list item (e.g. high priority) 
 
-def update_priority(task, priority): 
+def update_priority(Task, Priority): 
     # Check if the passed status is a valid value
-    if (priority.lower().strip() == 'High'):
-        priority = NOTSTARTED
-    elif (priority.lower().strip() == 'Medium'):
-        priority = INPROGRESS
-    elif (priority.lower().strip() == 'Low'):
-        priority = COMPLETED
+    if (Priority.lower().strip() == 'High'):
+        Priority = NOTSTARTED
+    elif (Priority.lower().strip() == 'Medium'):
+        Priority = INPROGRESS
+    elif (Priority.lower().strip() == 'Low'):
+        Priority = COMPLETED
     else:
-        print("Error: Status invalid " + priority)
+        print("Error: Status invalid " + Priority)
         return None
 
      try: 
@@ -56,9 +56,9 @@ def update_priority(task, priority):
         cur = project_db.cursor()
         cur.execute("""Update Task 
                        set status= %s 
-                       where task= %s""",(priority, task))
+                       where task= %s""",(Priority, Task))
         conn.commit()
-        return {task: priority}
+        return {Task: Priority}
 
  except Exception:
         raise DbConnectionError("Unable to connect to database")
@@ -67,14 +67,14 @@ def update_priority(task, priority):
             project_db.close()
         return None
 
-def delete_task(task):
+def delete_task(Task):
     # Below needs adapting to mysql:?
     try:
         project_db=_connect_to_db('Productivity')
         cur = project_db.cursor()
         query= """Delete From TODO_LIST Task Where Task =%s"""
         cur.execute(query)
-        return {'task': task}
+        return {'task': Task}
 
 except Exception:
     raise DbConnectionError("Unable to connect to database")
