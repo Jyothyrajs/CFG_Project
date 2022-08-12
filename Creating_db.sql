@@ -6,7 +6,7 @@ use Productivity;
 CREATE TABLE TODO_LIST (
     Task VARCHAR(250) PRIMARY KEY,
     Priority INT,
-    duration INT 
+    Duration INT 
 ); 
 
 SELECT * FROM TODO_LIST;
