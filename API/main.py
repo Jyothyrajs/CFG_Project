@@ -14,14 +14,14 @@ def index():
 @app.route('/tasks/new', methods=['POST'])
 def insert_new_task():
     req_data = request.get_json()
-    item = req_data['task']
+    item = req_data['Task']
     
     res_data = dbconnection.connect_db(Productivity)
     
     # return 400 status if task is not added (error)
     
     if res_data is None:
-        response = Response("{'error': 'No task added - " + task + "'}", status=400, mimetype='application/json') 
+        response = Response("{'error': 'No task added - " + Task + "'}", status=400, mimetype='application/json') 
         return response
     
     #json.dumps to convert python into JSON object
@@ -44,9 +44,9 @@ def retrieve_task():
         # Code below to be checked with mysql instead of mysql:
         conn = dbconnection('Productivity')
         c = conn.cursor()
-        c.execute('select * from task')
+        c.execute('select * from Task')
         result = c.fetchall()
-        return { "count": len(result), "task": result }
+        return { "count": len(result), "Task": result }
     except Exception as e:
         print('Error: ', e)
         return None
@@ -56,7 +56,7 @@ def retrieve_task():
 @app.route('/tasks/status', methods=['GET'])
 def retrieve_task():
     # Get parameter from the URL
-    task_name = request.args.get('task')
+    task_name = request.args.get('Task')
 
     # Get items from the db_connection file
     status = dbconnection.retrieve_task(task_name)
@@ -80,15 +80,15 @@ def retrieve_task():
 def update_priority():
     # Get item from the POST body
     req_data = request.get_json()
-    task = req_data['task']
-    priority = req_data['priority']
+    task = req_data['Task']
+    priority = req_data['Priority']
 
     # Update priority of item in the list:
-    res_data = dbconnection.update_status(task, priority)
+    res_data = dbconnection.update_status(Task, Priority, Duration)
 
     # Return error if the status could not be updated
     if res_data is None:
-        response = Response("{'error': 'Error updating task - '" + task + ", " + status   +  "}", status=400 , mimetype='application/json')
+        response = Response("{'error': 'Error updating task - '" + Task + ", " + Status + ", " + Duration + "}", status=400 , mimetype='application/json')
         return response
 
     # Return response
@@ -105,11 +105,11 @@ def delete_task():
     task = req_data['Task']
 
     # Delete item from the list
-    res_data = dbconnection.delete_task(task)
+    res_data = dbconnection.delete_task(Task)
 
     # Return error if the item could not be deleted
     if res_data is None:
-        response = Response("{'error': 'Error deleting task - '" + task +  "}", status=400 , mimetype='application/json')
+        response = Response("{'error': 'Error deleting task - '" + Task +  "}", status=400 , mimetype='application/json')
         return response
 
     # Return response
