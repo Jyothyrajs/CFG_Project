@@ -56,7 +56,7 @@ def update_priority(task, priority):
         cur = project_db.cursor()
         cur.execute("""Update Task 
                        set status= %s 
-                       where item= %s""",(priority, task))
+                       where task= %s""",(priority, task))
         conn.commit()
         return {task: priority}
 
